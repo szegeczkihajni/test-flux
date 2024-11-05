@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: postgresql
+  namespace: default
+spec:
+  chart:
+    repository: https://charts.bitnami.com/bitnami
+    name: postgresql
+    version: 11.6.8
+  values:
+    postgresqlUsername: user
+    postgresqlPassword: password
+    postgresqlDatabase: mydatabase
